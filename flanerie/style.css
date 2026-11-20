@@ -1,0 +1,453 @@
+*{
+    box-sizing: border-box
+}
+
+/* Paleta de cores*/
+
+:root{
+    --fundo: #368f8b;
+    --texto: #28464b;
+    --titulo: #3bb3a5;
+    --destaque: #25aeb3;
+    --acento: #ddbea8;
+    --links: #fcd29f;
+    --fundoCard: #daffef; 
+    --fundodestaque: #004346;
+    --fundoPesquisa: #64b6ac;
+    --sombra: #2a3152;
+}
+
+/* Tipografia */
+
+p, a, figcaption, caption, span, input::placeholder{
+    color: var(--texto);
+    font-family: GFS Neohellenic;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 500;
+}
+
+p{
+    text-indent: 10px; 
+}
+
+h1, h2, h4, h3{
+    color: var(--titulo);
+    font-family: Red Rose;
+    font-weight: 500;
+    margin: 0;
+}
+
+h1{
+    font-size: 40px;
+    font-family: Amarante;
+    font-weight: 800;
+}
+
+h2{
+    font-size: 25px;
+}
+
+h4{
+    font-size: 25px;
+}
+
+a{
+    color: var(--links);
+    text-decoration: none;
+}
+
+footer{
+    p{
+        color: var(--acento);
+    }
+}
+
+/* Body, header, nav e footer*/
+
+body{
+    margin: 0px;
+    background-color: var(--fundo);
+}
+
+header{
+    background-color: var(--fundodestaque);
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    #logo{
+        width: 100%;
+        max-width: 90px;
+        height: auto;
+    }
+}
+
+footer{
+    background-color: var(--fundodestaque);
+    min-height: 100px;
+    max-height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+/* Layouts de cards e outros */
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+.menu img{
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.texto, figure, .video{
+    flex: 1;
+    background-color:var(--fundoCard);
+    padding: 30px;
+    min-height: 320px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px var(--sombra);
+}
+
+.capa{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.capa figure{
+    background-color:var(--fundoCard);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    min-height: 320px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px var(--sombra);
+}
+
+.capa img{
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.textoCapa{
+    background-color:var(--fundoCard);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    min-height: 320px;
+    max-width: 500px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px var(--sombra);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    padding: 0 20px;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+#card{
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color: var(--fundoCard);
+    padding: 30px;
+    width: 100%;
+    min-height: 150px;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px var(--sombra);
+}
+
+.textoCard{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: auto;
+}
+
+#card img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.containerTrabalhos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    gap: 30px;
+}
+
+#cardTrabalho{
+    flex: 1;
+    display: flex; 
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    background-color:var(--fundoCard);
+    padding: 30px;
+    width: 100%;
+    max-width: 300px;
+    min-height: 250px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px var(--sombra);
+}
+
+#cardTrabalho img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.pesquisaContainer{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    gap: 15px;
+    max-width: 1000px;
+    height: 50px;
+    margin: 30px auto;
+    padding: 0 20px;
+    border-radius: 30px;
+    align-items: center;
+    justify-self: center;
+    background-color: var(--fundoPesquisa);
+    box-shadow: 0 4px 10px var(--sombra);
+}
+
+#barraPesquisa{
+    width: 100%;
+    max-width: 900px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    background-color: transparent; 
+    border: none;              
+    outline: none; 
+}
+
+.pesquisaContainer img{
+    width: 100%;
+    max-width: 30px;
+    height: 30px;
+}
+
+.hero{
+    width: 100%;
+    min-height: 450px;
+    padding: 40px 20px;
+    background-image: url("hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1{
+        font-size: 100px;
+        color: var(--links);
+    }
+}
+
+#button{
+    background-color: var(--fundodestaque);
+    padding: 10px;
+    border-radius: 5px;
+    height: auto;
+    width: auto;
+    align-self: flex-start;
+    display: inline-block;
+}
+
+.trabalho{
+    background-color: var(--fundoCard);
+    text-align: left;
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 30px;
+    border: 2px solid var(--fundodestaque);
+    height: auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 10px var(--sombra);
+}
+
+span{
+    background-color: var(--fundodestaque);
+    color: var(--acento);
+    text-decoration: underline;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+hr{
+    border: none;
+    background-color: var(--fundodestaque);
+    height: 3px;
+    width: 75%;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+figure {
+    margin: 0;
+}
+
+/* estados :hover e :focus */
+
+#card:hover, #cardPesquisa:hover, .texto:hover, figure:hover, .video:hover, .textoCapa:hover, .capa figure:hover, #cardTrabalho:hover, .trabalho:hover{
+  transform: scale(1.02);
+}
+
+a:hover{
+    color: var(--destaque);
+}
+
+:focus{
+  outline: 3px dashed var(--fundo);
+  outline-offset: 1px;
+  border-radius: 2px;
+  padding: 2px; 
+}
+
+#barraPesquisa:focus{
+  outline: 1px solid var(--titulo);
+  outline-offset: 1px;
+  border-radius: 2px;
+  padding: 2px;
+}
+
+/*Parte responsiva*/
+@media (max-width: 768px) {
+    body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    main{
+        padding: 0;
+    }
+
+    .hero {
+        min-height: 260px; 
+        padding: 20px;
+    }
+
+    p{
+        font-size: 18px;
+    }
+    h1{
+        font-size: 26px;
+    }
+    .hero h1 { 
+        font-size: 40px; 
+    }
+    h2{
+        font-size: 34px;
+    }
+    h4{
+        font-size: 20px;
+    }
+
+    header, footer{
+        height: auto;
+        padding: 15px;
+        flex-wrap: wrap;
+        gap: 15px;
+        text-align: center;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    input{
+        font-size: 14px;
+    }
+
+    .menu, .capa, #card, .containerTrabalhos{
+        flex-direction: column;
+        margin: 20px auto;
+        padding: 0 15px;
+        gap: 20px;
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .texto, figure, .video, .capa figure, .textoCapa, #card, #cardTrabalho, .trabalho{
+        width: 100%;
+        min-height: auto;
+        max-width: 100%;
+        margin: 0;
+        padding: 20px;
+        overflow-wrap: break-word;
+    }
+
+    .trabalho {
+        width: auto; 
+        margin: 20px;
+    }
+
+    nav{
+        display: none;
+    }
+}
